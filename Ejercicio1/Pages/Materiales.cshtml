@@ -1,0 +1,50 @@
+﻿@page
+@model Ejercicio1.Pages.MaterialesModel
+@{
+    ViewData["Title"] = "Materiales";
+
+    var title = "Materiales";
+
+    var materiales = new string[]
+    {
+"Bambú",
+"Madera",
+"Ladrillos",
+"Bloques de Hormigón",
+"Ladrillos triturados (para los cimientos)",
+"Tierra de construcción, seca y suelta",
+"Tierra seca y suelta",
+"Tierra Húmeda y apisonada",
+"Grava",
+"Arena seca-húmeda",
+"Cemento",
+"Arcilla seca y compactada",
+"Hormigón de cemento",
+"Mortero de cemento",
+"Hormigón armado (5% de acero)"
+
+    };
+}
+
+<h2>@title</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var mat in materiales)
+        {
+            <tr>
+                <td>@mat</td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
